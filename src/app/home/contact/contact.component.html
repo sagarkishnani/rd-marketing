@@ -1,0 +1,22 @@
+<div id="contact" class="p-16 bg-white">
+    <div class="flex flex-row">
+      <img src="../../../assets/img/patterns/line.svg" alt="line">
+      <h2 class="font-semibold text-xl pl-4">Contacto</h2>
+    </div>
+    <div>
+        <form [formGroup]="contactForm" autocomplete="off">
+            <div class="grid grid-cols-2">
+                <div></div>
+                <div>
+                    <div class="example-container">
+                        <mat-form-field appearance="outline">
+                          <mat-label>Enter your email</mat-label>
+                          <input matInput placeholder="pat@example.com"  required>
+                        </mat-form-field>
+                      </div>
+                </div>
+            </div>
+          </form>
+    </div>
+  </div>
+  
