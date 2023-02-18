@@ -8,13 +8,19 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material/material.module';
 import { ProjectsComponent } from './projects/projects.component';
 import { CountUpModule } from 'ngx-countup';
+import { BannerComponent } from './banner/banner.component';
+import { UsComponent } from './us/us.component';
+import { ServicesComponent } from './services/services.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     ClientsComponent,
     ContactComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    BannerComponent,
+    UsComponent,
+    ServicesComponent
   ],
   imports: [
     CommonModule,
