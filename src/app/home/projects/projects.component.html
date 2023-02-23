@@ -1,16 +1,16 @@
 <div id="projects" class="bg-white p-16">
   <div class="flex flex-row">
     <img src="../../../assets/img/patterns/line.svg" alt="line">
-    <h2 class="font-semibold text-xl pl-4">Proyectos</h2>
+    <h2 class="font-medium text-xl pl-4">Proyectos</h2>
   </div>
-<div class="py-12 md:py-0 md:h-60 flex flex-col md:flex-row justify-around items-center relative">
-    <div *ngFor="let project of projects" class="max-w-[12rem]">
-      <h3 class="mb-3 md:mb-0 text-3xl font-bold pt-2 inline" [countUp]="project.count"
+  <div class="py-12 md:py-0 md:h-60 flex flex-col md:flex-row justify-around self-center relative">
+    <div *ngFor="let project of projects" class="w-[15rem]">
+      <h3 class="mb-3 md:mb-0 text-[3.5rem] font-bold pt-2 inline" [countUp]="project.count"
         [options]="{ enableScrollSpy: true }">
       </h3>
-      <h3 class="text-3xl font-bold inline pl-1">+</h3>
+      <h3 class="text-[3rem] font-bold inline pl-1">+</h3>
       <hr class="h-4 border-black mt-2">
-      <p class="mb-8 md:mb-0 text-[#0B2A59] font-semibold">{{project.name}}</p>
+      <p class="mb-8 text-lg md:mb-0 text-black font-semibold">{{project.name}}</p>
     </div>
     <div class="dots-pattern">
       <img class="w-96 overflow-hidden" src="../../../assets/img/patterns/dots-pattern.svg" alt="dots-pattern">

@@ -11,6 +11,8 @@ import { CountUpModule } from 'ngx-countup';
 import { BannerComponent } from './banner/banner.component';
 import { UsComponent } from './us/us.component';
 import { ServicesComponent } from './services/services.component';
+import { MissionComponent } from './mission/mission.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,13 @@ import { ServicesComponent } from './services/services.component';
     ProjectsComponent,
     BannerComponent,
     UsComponent,
-    ServicesComponent
+    ServicesComponent,
+    MissionComponent
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    FontAwesomeModule,
     SharedModule,
     MaterialModule,
     CountUpModule

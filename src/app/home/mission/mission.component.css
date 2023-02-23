@@ -1,0 +1,14 @@
+.r-position {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translate(0%, 10%);
+}
+
+.d-position {
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(-30%, 50%);
+}

@@ -1,6 +1,29 @@
 <div id="services" class="bg-white p-16">
   <div class="flex flex-row">
     <img src="../../../assets/img/patterns/line.svg" alt="line">
-    <h2 class="font-semibold text-xl pl-4">Servicios</h2>
+    <h2 class="font-medium text-xl pl-4">Servicios</h2>
+  </div>
+  <div class="pt-12 flex flex-row justify-center">
+    <div class="w-96 flex flex-col">
+      <div (click)="setActive(service)" *ngFor="let service of services" class="mb-6 hover:cursor-pointer">
+        <p [ngClass]="activeServiceIndex == service.index ? 'text-black' : 'text-gray'" class="-translate-x-6">
+          {{service.id}}</p>
+        <h3 [ngClass]="activeServiceIndex == service.index ? 'text-black' : 'text-gray'" class="text-3xl font-semibold">
+          {{service.name}}</h3>
+      </div>
+    </div>
+    <div class="w-96 flex flex-wrap items-center self-center">
+      <div class="flex flex-row flex-wrap">
+        <div *ngFor="let detail of activeService.details"
+          class="bg-gray px-4 font-medium py-2 text-sm rounded-full m-1 hover:bg-yellow hover:text-white hover:cursor-default">
+          {{detail}}
+        </div>
+      </div>
+      <div class="mx-2 my-4">
+        <p class="pb-2">{{activeService.description}}</p>
+        <a class="text-yellow font-medium" href="">Ver más</a>
+        <hr class="border-black border-[1px] mt-4">
+      </div>
+    </div>
   </div>
 </div>
