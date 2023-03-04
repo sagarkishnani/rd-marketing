@@ -27,3 +27,18 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #d9990c;
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: lightgray !important;
+}
+
+@media (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+}

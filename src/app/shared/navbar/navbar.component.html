@@ -1,4 +1,4 @@
-<nav class="bg-onyx text-white h-28 flex flex-row justify-around items-center">
+<nav class="bg-onyx text-white h-28 lg:flex-row lg:justify-around lg:items-center hidden lg:flex">
   <div>
     <img class="h-20 transition ease-in-out delay-150 hover:scale-105" src="../../../assets/img/logo/logo-3.png"
       alt="RD Marketing">
@@ -16,3 +16,35 @@
     </button>
   </div>
 </nav>
+<nav class="lg:hidden bg-onyx text-white">
+  <div class="h-20 flex flex-row flex-wrap justify-center md:justify-around lg:justify-center items-center">
+    <!-- <div (click)="showSidebar()" class="basis-1/5">
+      <fa-icon size="2x" [styles]="{'color': '#ffffff'}" [icon]="faBars"></fa-icon>
+    </div> -->
+    <div>
+      <img class="h-16 text-center" src="../../../assets/img/logo/logo-3.png" alt="rd-marketing" routerLink="/">
+    </div>
+  </div>
+</nav>
+<!-- <div [ngClass]="{'hidden': !isSidebar, 'fixed': isSidebar}" class="top-0 left-0 right-0 bottom-0 z-20 p-6 bg-[#0B2A59]">
+  <div (click)="showSidebar()" class="text-right">
+    <fa-icon size="2x" [styles]="{'color': '#ffffff'}" [icon]="faXmark"></fa-icon>
+  </div>
+  <div class="flex flex-col justify-center font-bold flex-wrap text-center text-white">
+    <div class="py-4">
+      <img class="h-12 m-auto" src="../../../assets/img/logo/logo-3.png" alt="rd-marketing">
+    </div>
+    <div class="pt-4">
+      <a class="text-xl" href="#" routerLink="/">Inicio</a>
+    </div>
+    <div class="pt-4">
+      <a class="text-xl" routerLink="/nosotros">Nosotros</a>
+    </div>
+    <div class="pt-4">
+      <a class="text-xl" routerLink="/servicios">Servicios</a>
+    </div>
+    <div class="pt-4">
+      <a class="text-xl" routerLink="/contacto">Contacto</a>
+    </div>
+  </div>
+</div> -->

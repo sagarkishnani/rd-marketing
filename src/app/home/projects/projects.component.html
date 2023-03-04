@@ -1,16 +1,38 @@
-<div id="projects" class="bg-white p-16">
+<div id="projects" class="bg-white p-8 md:p-16">
   <div class="flex flex-row">
-    <img src="../../../assets/img/patterns/line.svg" alt="line">
+    <img class="w-12 md:w-auto" src="../../../assets/img/patterns/line.svg" alt="line">
     <h2 class="font-medium text-xl pl-4">Proyectos</h2>
   </div>
+  <div class="py-16">
+    <swiper [config]="swiperConfig" [navigation]="true">
+      <ng-template *ngFor="let project of projects" swiperSlide>
+        <div class="p-0 md:p-16">
+          <img class="h-72 w-full object-cover md:grayscale transition duration-500 md:hover:grayscale-0"
+            [src]="url + project.img" [alt]="project.name">
+          <div>
+            <div class="number-box">
+              <span class="text-white text-center font-semibold">{{project.number}}</span>
+            </div>
+            <h5 class="font-semibold text-xl">{{project.name}}</h5>
+            <p class="text-sm">{{project.detail}}</p>
+          </div>
+        </div>
+      </ng-template>
+    </swiper>
+    <div class="pt-4 md:pt-0 md:pl-8">
+      <a class="text-yellow text-lg font-medium" href="">
+        <p class="transition delay-150 hover:translate-x-4">Ver todos los proyectos ></p>
+      </a>
+    </div>
+  </div>
   <div class="py-12 md:py-0 md:h-60 flex flex-col md:flex-row justify-around self-center relative">
-    <div *ngFor="let project of projects" class="w-[15rem]">
-      <h3 class="mb-3 md:mb-0 text-[3.5rem] font-bold pt-2 inline" [countUp]="project.count"
+    <div *ngFor="let projectNumber of projectNumbers" class="w-full md:w-[15rem] text-center md:text-left">
+      <h3 class="mb-3 md:mb-0 text-[3.5rem] font-bold pt-2 inline" [countUp]="projectNumber.count"
         [options]="{ enableScrollSpy: true }">
       </h3>
       <h3 class="text-[3rem] font-bold inline pl-1">+</h3>
       <hr class="h-4 border-black mt-2">
-      <p class="mb-8 text-lg md:mb-0 text-black font-semibold">{{project.name}}</p>
+      <p class="mb-8 text-lg md:mb-0 text-black font-semibold">{{projectNumber.name}}</p>
     </div>
     <div class="dots-pattern">
       <img class="w-96 overflow-hidden" src="../../../assets/img/patterns/dots-pattern.svg" alt="dots-pattern">

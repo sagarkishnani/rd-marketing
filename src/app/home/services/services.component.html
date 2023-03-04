@@ -1,6 +1,6 @@
-<div id="services" class="bg-white p-16">
+<div id="services" class="bg-white p-8 md:p-16 hidden md:block">
   <div class="flex flex-row">
-    <img src="../../../assets/img/patterns/line.svg" alt="line">
+    <img class="w-12 md:w-auto" src="../../../assets/img/patterns/line.svg" alt="line">
     <h2 class="font-medium text-xl pl-4">Servicios</h2>
   </div>
   <div class="pt-12 flex flex-row justify-center">
@@ -12,7 +12,7 @@
           {{service.name}}</h3>
       </div>
     </div>
-    <div class="w-96 flex flex-wrap items-center self-center">
+    <div *ngIf="activeService" [@simpleFadeAnimation]="'in'" class="w-96 flex flex-wrap items-center self-center">
       <div class="flex flex-row flex-wrap">
         <div *ngFor="let detail of activeService.details"
           class="bg-gray px-4 font-medium py-2 text-sm rounded-full m-1 hover:bg-yellow hover:text-white hover:cursor-default">

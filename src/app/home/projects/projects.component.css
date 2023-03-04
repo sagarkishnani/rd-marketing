@@ -1,6 +1,17 @@
+@import "../../../../node_modules/swiper/swiper-bundle.css";
+
 .dots-pattern {
-    position: absolute;
-    right: 0;
-    top: 0%; 
-    transform: translate(50%, 0%);
+  position: absolute;
+  right: 0;
+  top: 0%;
+  transform: translate(50%, 0%);
+}
+
+.number-box {
+  padding: 0.3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-image: url("../../../assets/img/patterns/blob-pattern.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }

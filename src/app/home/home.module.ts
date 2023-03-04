@@ -1,18 +1,19 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { HomeComponent } from './home.component';
-import { SharedModule } from '../shared/shared.module';
-import { ClientsComponent } from './clients/clients.component';
-import { ContactComponent } from './contact/contact.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { MaterialModule } from '../material/material.module';
-import { ProjectsComponent } from './projects/projects.component';
-import { CountUpModule } from 'ngx-countup';
 import { BannerComponent } from './banner/banner.component';
-import { UsComponent } from './us/us.component';
-import { ServicesComponent } from './services/services.component';
-import { MissionComponent } from './mission/mission.component';
+import { ClientsComponent } from './clients/clients.component';
+import { CommonModule } from '@angular/common';
+import { ContactComponent } from './contact/contact.component';
+import { CountUpModule } from 'ngx-countup';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HomeComponent } from './home.component';
+import { MaterialModule } from '../material/material.module';
+import { MissionComponent } from './mission/mission.component';
+import { NgModule } from '@angular/core';
+import { ProjectsComponent } from './projects/projects.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ServicesComponent } from './services/services.component';
+import { SharedModule } from '../shared/shared.module';
+import { SwiperModule } from 'swiper/angular';
+import { UsComponent } from './us/us.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FontAwesomeModule,
     SharedModule,
     MaterialModule,
-    CountUpModule
+    CountUpModule,
+    SwiperModule
   ],
   bootstrap: [HomeComponent]
 })

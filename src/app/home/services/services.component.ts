@@ -19,7 +19,20 @@ interface Service {
 @Component({
   selector: 'app-services',
   templateUrl: './services.component.html',
-  styleUrls: ['./services.component.css']
+  styleUrls: ['./services.component.css'],
+  animations: [
+    trigger('simpleFadeAnimation', [
+      state('in', style({ opacity: 1, paddingLeft: 0 + 'rem' })),
+      transition(':enter', [
+        style({ opacity: 1, paddingLeft: 0 + 'rem' }),
+        animate(200),
+      ]),
+      transition(
+        ':leave',
+        animate(600, style({ opacity: 0, width: 0 + 'rem', }))
+      ),
+    ]),
+  ],
 })
 export class ServicesComponent implements OnInit {
 
@@ -38,7 +51,7 @@ export class ServicesComponent implements OnInit {
       name: 'Posicionamiento SEO',
       description: 'We create world-class websites using modern design practices. Mobile-first websites and web experiences are essential to the success of your web project.',
       pdfURL: '',
-      details: ['SEO', 'Campañas', 'Posts e historias']
+      details: ['SEO', 'Google Ads']
     },
     {
       index: 3,
@@ -46,7 +59,7 @@ export class ServicesComponent implements OnInit {
       name: 'Diseño web',
       description: 'We create world-class websites using modern design practices. Mobile-first websites and web experiences are essential to the success of your web project.',
       pdfURL: '',
-      details: ['Estrategias de marketing', 'Campañas', 'Posts e historias']
+      details: ['Landing Pages', 'Ecommerce', 'Blogs']
     },
     {
       index: 4,
@@ -54,7 +67,7 @@ export class ServicesComponent implements OnInit {
       name: 'Branding',
       description: 'We create world-class websites using modern design practices. Mobile-first websites and web experiences are essential to the success of your web project.',
       pdfURL: '',
-      details: ['Estrategias de marketing', 'Campañas', 'Posts e historias']
+      details: ['Logos', 'Rebranding']
     },
   ]
 
