@@ -3,7 +3,7 @@
     <img class="w-12 md:w-auto" src="../../../assets/img/patterns/line.svg" alt="line">
     <h2 class="font-medium text-xl pl-4">Clientes</h2>
   </div>
-  <div class="grid grid-cols-1 md:grid-cols-4 md:gap-4 place-items-center pt-24">
+  <div data-aos="fade-down" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 md:gap-4 place-items-center pt-24">
     <div *ngFor="let client of clients">
       <img [src]="url + client.image" [alt]="client.name">
     </div>

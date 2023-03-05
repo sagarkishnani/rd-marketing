@@ -4,29 +4,35 @@
       alt="RD Marketing">
   </div>
   <div class="flex flex-row justify-around flex-wrap font-medium ">
-    <div class="px-12">
-      <a>Nosotros</a>
+    <div class="px-12 cursor-pointer" (click)="scrollToSection('us')">
+      <p class="hover:text-yellow">Nosotros</p>
     </div>
-    <div class="px-12">Servicios</div>
-    <div class="px-12">Proyectos</div>
+    <div class="px-12 cursor-pointer" (click)="scrollToSection('services')">
+      <p class="hover:text-yellow">Servicios</p>
+    </div>
+    <div class="px-12 cursor-pointer" (click)="scrollToSection('projects')">
+      <p class="hover:text-yellow">Proyectos</p>
+    </div>
   </div>
   <div>
-    <button class="px-4 py-2 rounded-3xl bg-gray text-black font-semibold hover:bg-yellow hover:text-white">
+    <button (click)="scrollToSection('contact')" class=" px-4 py-2 rounded-3xl bg-gray text-black font-semibold hover:bg-yellow
+      hover:text-white">
       Contacto
     </button>
   </div>
 </nav>
 <nav class="lg:hidden bg-onyx text-white">
-  <div class="h-20 flex flex-row flex-wrap justify-center md:justify-around lg:justify-center items-center">
-    <!-- <div (click)="showSidebar()" class="basis-1/5">
-      <fa-icon size="2x" [styles]="{'color': '#ffffff'}" [icon]="faBars"></fa-icon>
-    </div> -->
-    <div>
+  <div class="h-24 flex flex-row flex-wrap justify-around lg:justify-center items-center">
+    <div class="basis-3/5 pl-4">
       <img class="h-16 text-center" src="../../../assets/img/logo/logo-3.png" alt="rd-marketing" routerLink="/">
+    </div>
+    <div (click)="showSidebar()" class="basis-1/5 text-center">
+      <fa-icon size="2x" [styles]="{'color': '#ffffff'}" [icon]="faBars"></fa-icon>
     </div>
   </div>
 </nav>
-<!-- <div [ngClass]="{'hidden': !isSidebar, 'fixed': isSidebar}" class="top-0 left-0 right-0 bottom-0 z-20 p-6 bg-[#0B2A59]">
+<div *ngIf="isSidebar" [@enterAnimation] [ngClass]="{'hidden': !isSidebar, 'fixed': isSidebar}"
+  class="top-0 left-0 right-0 bottom-0 z-20 p-6 bg-onyx">
   <div (click)="showSidebar()" class="text-right">
     <fa-icon size="2x" [styles]="{'color': '#ffffff'}" [icon]="faXmark"></fa-icon>
   </div>
@@ -35,16 +41,13 @@
       <img class="h-12 m-auto" src="../../../assets/img/logo/logo-3.png" alt="rd-marketing">
     </div>
     <div class="pt-4">
-      <a class="text-xl" href="#" routerLink="/">Inicio</a>
+      <a class="text-xl" (click)="scrollToSection('us')">Nosotros</a>
     </div>
     <div class="pt-4">
-      <a class="text-xl" routerLink="/nosotros">Nosotros</a>
+      <a class="text-xl" (click)="scrollToSection('services')">Servicios</a>
     </div>
     <div class="pt-4">
-      <a class="text-xl" routerLink="/servicios">Servicios</a>
-    </div>
-    <div class="pt-4">
-      <a class="text-xl" routerLink="/contacto">Contacto</a>
+      <a class="text-xl" (click)="scrollToSection('contact')">Contacto</a>
     </div>
   </div>
-</div> -->
+</div>

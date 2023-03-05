@@ -12,16 +12,25 @@
     </div>
     <div class="pt-4 md:pt-0 md:col-span-2">
       <h5 class="font-medium text-lg pb-4">Sobre nosotros</h5>
-      <p class="pb-4 md:pb-2">Nosotros</p>
-      <p class="pb-4 md:pb-2">Contáctanos</p>
+      <p class="pb-4 md:pb-2 cursor-pointer hover:text-yellow" (click)="scrollToSection('us')">Nosotros</p>
+      <p class="pb-4 md:pb-2 cursor-pointer hover:text-yellow" (click)="scrollToSection('contact')">Contáctanos</p>
     </div>
     <div class="pt-4 md:pt-0 md:col-span-2">
       <h5 class="font-medium text-lg pb-4">Servicios</h5>
-      <p class="pb-4 md:pb-2">Marketing digital</p>
-      <p class="pb-4 md:pb-2">Diseño web</p>
+      <p class="pb-4 md:pb-2 cursor-pointer hover:text-yellow" (click)="scrollToSection('services')">Marketing digital
+      </p>
+      <p class="pb-4 md:pb-2 cursor-pointer hover:text-yellow" (click)="scrollToSection('services')">Diseño web</p>
     </div>
     <hr class="block md:hidden mt-8 border-white">
-    <div class="pt-16 md:pt-24 md:col-span-6 text-end">
+    <div class="pt-16 md:pt-24 text-center md:col-span-2 lg:col-span-1">
+      <a href="https://www.instagram.com/rdmarketingperu/" target="_blank" rel="noopener noreferrer">
+        <fa-icon class="pr-8" size="xl" [icon]="faInstagram"></fa-icon>
+      </a>
+      <a href="https://facebook.com/rdmarketingperu" target="_blank" rel="noopener noreferrer">
+        <fa-icon size="xl" [icon]="faFacebook"></fa-icon>
+      </a>
+    </div>
+    <div class="pt-16 md:pt-24 md:col-span-5 lg:col-span-6  text-center md:text-end">
       Copyright © 2023 RD Marketing
     </div>
   </div>

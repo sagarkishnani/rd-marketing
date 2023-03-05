@@ -3,23 +3,23 @@
     <img class="w-12 md:w-auto" src="../../../assets/img/patterns/line.svg" alt="line">
     <h2 class="font-medium text-xl pl-4">Contacto</h2>
   </div>
-  <div class="p-4 md:p-16">
+  <div data-aos="fade-down" class="p-4 lg:p-16">
     <form [formGroup]="contactForm" autocomplete="off">
-      <div class="grid grid-cols-1 md:grid-cols-6 md:gap-12">
-        <div class="md:col-span-3 md:px-16">
+      <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 md:gap-12">
+        <div class="lg:col-span-3 md:col-span-2 lg:px-4 xl:px-16">
           <div class="relative mb-4">
             <input formControlName="Name" type="text"
               class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-[1px] border-onyx border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-black peer"
               placeholder=" " />
             <label
-              class="absolute text-md text-gray-darker dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Nombre*</label>
+              class="absolute text-md text-gray-darker dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 pointer-events-none">Nombre*</label>
           </div>
           <div class="relative mb-4">
             <input formControlName="Email" type="text"
               class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-[1px] border-onyx border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-black peer"
               placeholder=" " />
             <label
-              class="absolute text-md text-gray-darker dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Correo
+              class="absolute text-md text-gray-darker dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 pointer-events-none">Correo
               electrónico*</label>
           </div>
           <div class="relative mb-4">
@@ -27,33 +27,34 @@
               class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-[1px] border-onyx border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-black peer"
               placeholder=" " />
             <label
-              class="absolute text-md text-gray-darker dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Celular*</label>
+              class="absolute text-md text-gray-darker dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 pointer-events-none">Celular*</label>
           </div>
           <div class="relative mb-4">
             <input formControlName="Message" type="text"
               class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-[1px] border-onyx border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-black peer"
               placeholder=" " />
             <label
-              class="absolute text-md text-gray-darker dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Cuéntanos
+              class="absolute text-md text-gray-darker dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 pointer-events-none">Cuéntanos
               acerca de tu proyecto*</label>
           </div>
           <div class="text-center md:text-left mt-8 hidden md:block">
             <button class="px-8 py-2 bg-yellow text-white text-lg rounded-full hover:bg-yellow-dark">Enviar</button>
           </div>
         </div>
-        <div class="col-span-1 md:col-span-3 md:px-16">
+        <div class="col-span-1 md:col-span-2 lg:col-span-3 lg:px-4 xl:px-16">
           <div class="md:w-3/4">
             <p class="pt-4 md:pt-0 pb-4 pl-2">Me interesa...</p>
             <div class="flex flex-row flex-wrap">
               <div (click)="addService(service)" *ngFor="let service of services"
-                class="bg-gray px-4 font-medium py-2 text-sm rounded-full m-1 hover:bg-yellow hover:text-white hover:cursor-pointer"
+                class="bg-gray px-4 font-medium py-2 text-sm rounded-full m-1 md:hover:bg-yellow md:hover:text-white hover:cursor-pointer"
                 [ngClass]="service.isActive ? 'bg-yellow text-white' : ''">
                 {{service.name}}
               </div>
             </div>
           </div>
           <div class="relative">
-            <img class="absolute translate-x-96 -translate-y-80 rotate-45 w-[48rem]"
+            <img
+              class="absolute pointer-events-none translate-x-96 5xl:translate-x-[40rem] -translate-y-80 rotate-45 w-[48rem]"
               src="../../../assets/img/patterns/circle-pattern.svg" alt="circle-pattern">
           </div>
         </div>

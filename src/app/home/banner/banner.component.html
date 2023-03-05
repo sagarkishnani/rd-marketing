@@ -6,7 +6,8 @@
   <div class="dots-pattern">
     <img class="w-96 overflow-hidden" src="../../../assets/img/patterns/dots-pattern.svg" alt="dots-pattern">
   </div>
-  <video autoplay loop [muted]="'muted'">
-    <source src='../../../assets/video/home-video-rd.webm' />
+  <video autoplay loop [muted]="'muted'" playsinline>
+    <source src='../../../assets/video/home-video-rd.webm' type="video/webm" />
+    <source src="../../../assets/video/home-video-rd.webm" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
   </video>
 </div>

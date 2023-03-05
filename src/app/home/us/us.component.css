@@ -4,3 +4,16 @@
   top: 0;
   transform: translate(40%, -50%);
 }
+
+.dots-pattern {
+  position: absolute;
+  right: 0;
+  top: 0%;
+  transform: translate(50%, 30%);
+}
+
+@media (max-width: 768px) {
+  .dots-pattern {
+    transform: translate(40%, 150%);
+  }
+}

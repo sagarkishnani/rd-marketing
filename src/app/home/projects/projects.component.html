@@ -3,20 +3,22 @@
     <img class="w-12 md:w-auto" src="../../../assets/img/patterns/line.svg" alt="line">
     <h2 class="font-medium text-xl pl-4">Proyectos</h2>
   </div>
-  <div class="py-16">
+  <div data-aos="fade-down" class="py-16">
     <swiper [config]="swiperConfig" [navigation]="true">
       <ng-template *ngFor="let project of projects" swiperSlide>
-        <div class="p-0 md:p-16">
-          <img class="h-72 w-full object-cover md:grayscale transition duration-500 md:hover:grayscale-0"
-            [src]="url + project.img" [alt]="project.name">
-          <div>
-            <div class="number-box">
-              <span class="text-white text-center font-semibold">{{project.number}}</span>
+        <a [href]="project.link" target="_blank" rel="noopener noreferrer">
+          <div class="p-0 md:p-16">
+            <img class="h-72 w-full object-cover md:grayscale transition duration-500 md:hover:grayscale-0"
+              [src]="url + project.img" [alt]="project.name">
+            <div>
+              <div class="number-box">
+                <span class="text-white text-center font-semibold">{{project.number}}</span>
+              </div>
+              <h5 class="font-semibold text-xl">{{project.name}}</h5>
+              <p class="text-sm">{{project.detail}}</p>
             </div>
-            <h5 class="font-semibold text-xl">{{project.name}}</h5>
-            <p class="text-sm">{{project.detail}}</p>
           </div>
-        </div>
+        </a>
       </ng-template>
     </swiper>
     <div class="pt-4 md:pt-0 md:pl-8">
@@ -25,8 +27,9 @@
       </a>
     </div>
   </div>
-  <div class="py-12 md:py-0 md:h-60 flex flex-col md:flex-row justify-around self-center relative">
-    <div *ngFor="let projectNumber of projectNumbers" class="w-full md:w-[15rem] text-center md:text-left">
+  <div data-aos="fade-down" class="py-12 lg:py-0 lg:h-60 flex flex-col lg:flex-row justify-around self-center relative">
+    <div *ngFor="let projectNumber of projectNumbers"
+      class="w-[15rem] m-auto lg:m-0 lg:w-[15rem] text-center lg:text-left md:mt-4 lg:mt-0">
       <h3 class="mb-3 md:mb-0 text-[3.5rem] font-bold pt-2 inline" [countUp]="projectNumber.count"
         [options]="{ enableScrollSpy: true }">
       </h3>
@@ -34,7 +37,7 @@
       <hr class="h-4 border-black mt-2">
       <p class="mb-8 text-lg md:mb-0 text-black font-semibold">{{projectNumber.name}}</p>
     </div>
-    <div class="dots-pattern">
+    <div class="dots-pattern-2">
       <img class="w-96 overflow-hidden" src="../../../assets/img/patterns/dots-pattern.svg" alt="dots-pattern">
     </div>
   </div>

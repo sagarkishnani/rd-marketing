@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-
 import SwiperCore, { Navigation, Pagination, Scrollbar } from 'swiper';
 
 // install Swiper modules
@@ -17,6 +16,7 @@ interface Project {
   name: string;
   detail: string;
   img: string;
+  link: string;
 }
 
 @Component({
@@ -36,7 +36,13 @@ export class ProjectsComponent implements OnInit {
         slidesPerView: '1',
       },
       640: {
+        slidesPerView: '1',
+      },
+      860: {
         slidesPerView: '2',
+      },
+      1800: {
+        slidesPerView: '3',
       }
     }
   }
@@ -65,21 +71,32 @@ export class ProjectsComponent implements OnInit {
       number: '01',
       name: 'Clínica Arthromeds',
       detail: 'Diseño y desarrollo web / UX / SEO',
-      img: 'clinic-mockup.webp'
+      img: 'clinic-mockup.webp',
+      link: 'https://clinicarthromeds.pe/'
     },
     {
       id: 2,
       number: '02',
       name: 'Conmos Audio',
       detail: 'Diseño y desarrollo web / Branding / SEO / Social media',
-      img: 'conmos-proyecto.webp'
+      img: 'conmos-proyecto.webp',
+      link: 'https://conmosaudio.pe/'
     },
     {
       id: 3,
       number: '03',
       name: 'Conmos Audio',
       detail: 'Diseño y desarrollo web / Branding / SEO / Social media',
-      img: 'conmos-proyecto.webp'
+      img: 'conmos-proyecto.webp',
+      link: 'https://conmosaudio.pe/'
+    },
+    {
+      id: 4,
+      number: '04',
+      name: 'Conmos Audio',
+      detail: 'Diseño y desarrollo web / Branding / SEO / Social media',
+      img: 'conmos-proyecto.webp',
+      link: 'https://conmosaudio.pe/'
     }
   ]
 

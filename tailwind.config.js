@@ -21,7 +21,13 @@ module.exports = {
       sans: ["Graphik", "sans-serif"],
       serif: ["Merriweather", "serif"],
     },
-    extend: {},
+    extend: {
+      screens: {
+        "3xl": "1800px",
+        "4xl": "2100px",
+        "5xl": "2500px",
+      },
+    },
   },
   plugins: [],
 };
