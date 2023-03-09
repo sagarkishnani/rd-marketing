@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-us',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private scroller: ViewportScroller) { }
 
   ngOnInit(): void {
+  }
+
+  scrollToSection(section: string) {
+    this.scroller.scrollToAnchor(section);
   }
 
 }

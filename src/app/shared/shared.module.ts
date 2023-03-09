@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { WhatsappComponent } from './whatsapp/whatsapp.component';
 
 @NgModule({
   declarations: [
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    WhatsappComponent
   ],
   imports: [
     CommonModule,
@@ -15,7 +17,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   ],
   exports: [
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    WhatsappComponent
   ]
 })
 export class SharedModule { }

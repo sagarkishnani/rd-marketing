@@ -6,19 +6,19 @@
   <div data-aos="fade-down" class="py-16">
     <swiper [config]="swiperConfig" [navigation]="true">
       <ng-template *ngFor="let project of projects" swiperSlide>
-        <a [href]="project.link" target="_blank" rel="noopener noreferrer">
-          <div class="p-0 md:p-16">
+        <div class="p-0 md:p-16">
+          <a [href]="project.link" target="_blank" rel="noopener noreferrer">
             <img class="h-72 w-full object-cover md:grayscale transition duration-500 md:hover:grayscale-0"
               [src]="url + project.img" [alt]="project.name">
-            <div>
-              <div class="number-box">
-                <span class="text-white text-center font-semibold">{{project.number}}</span>
-              </div>
-              <h5 class="font-semibold text-xl">{{project.name}}</h5>
-              <p class="text-sm">{{project.detail}}</p>
+          </a>
+          <div>
+            <div class="number-box">
+              <span class="text-white text-center font-semibold">{{project.number}}</span>
             </div>
+            <h5 class="font-semibold text-xl">{{project.name}}</h5>
+            <p class="text-sm">{{project.detail}}</p>
           </div>
-        </a>
+        </div>
       </ng-template>
     </swiper>
     <div class="pt-4 md:pt-0 md:pl-8">
